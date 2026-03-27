@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Enable class-based dark mode */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gray-100 text-gray-950  transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-all duration-200;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+}
+textarea, input {
+  @apply text-gray-900 dark:text-white;
+}
+.dark body {
+  background-color: #111827; /* keep dark mode clean */
+}
+
+/* Prevent background dimming */
+body {
+  background-color: transparent;
+}
