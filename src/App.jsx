@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import WelcomePage from "./pages/WelcomePage";
 import AboutPage from "./pages/AboutPage";
 import PostsPage from "./pages/PostsPage";
@@ -10,7 +10,6 @@ import Header from "./components/Header";
 function Layout() {
   const location = useLocation();
 
-  // Hide header only on welcome page
   const hideHeader = location.pathname === "/";
 
   return (
